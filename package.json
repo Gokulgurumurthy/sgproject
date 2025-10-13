@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "dev2": "nodemon practice.js",
+    "dev3": "nodemon review.js"
+
   },
   "keywords": [],
   "author": "",
