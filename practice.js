@@ -55,3 +55,23 @@ console.log(obj1);
 
 
 
+let a11 = 1+2;
+let a2 = 3+4;
+let a3 = 5+6;
+
+console.log(a11);
+console.log(a2);
+console.log(a3);
+
+function add(a,b){
+    console.log(a+b);
+}
+
+add(5,10)
+
+function num(){
+    for (i=1;i<=100;i++)
+        console.log(i);
+        
+}
+num();
