@@ -69,9 +69,3 @@ function add(a,b){
 
 add(5,10)
 
-function num(){
-    for (i=1;i<=100;i++)
-        console.log(i);
-        
-}
-num();
