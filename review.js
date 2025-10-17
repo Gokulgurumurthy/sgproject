@@ -82,6 +82,43 @@ function add(a,b){
 add(5,6)
 
 // 6. What are objects, explain shallow and deep copy with an example.
+
+an object is a collection of key value pairs
+
+each key can be a string or an identifier, and the value can be anything
+
+shallow copy : it copies the top level properties of an object , but if those properies are objects themselves, they are still referenced and not copied
+eg: 
+const original = {
+  name: "Alice",
+  address: {
+    city: "New York"
+  }
+};
+
+const shallowCopy = { ...original }; 
+shallowCopy.address.city = "Los Angeles";
+
+console.log(original.address.city); 
+
+Deep copy : it creates a completely independent copy, including all nested objects
+
+const original = {
+  name: "Alice",
+  address: {
+    city: "New York"
+  }
+};
+
+const deepCopy = JSON.parse(JSON.stringify(original));
+
+deepCopy.address.city = "Los Angeles";
+
+console.log(original.address.city); 
+
+
+
+
 // 7. What is the importance of loops.
 
 loops are something which can be reiterated how many times we want to 
