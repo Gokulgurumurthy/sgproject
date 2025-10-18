@@ -184,3 +184,23 @@ function naturalSumArray(arr) {
 }
 
 console.log(naturalSumArray([1,2,3,4,5,6,7,8,9,10]))
+
+// non parametrized with default value 
+
+function nonParam(val = [10]){
+  return val
+}
+console.log(nonParam());
+ 
+let arr = [1,2,3,4,"hello",true,[1,2,3]];
+
+let arrInstance = arr;
+
+arrInstance[4] = "good day"
+
+let arrCopy = [...arr];
+
+arrCopy[6][1]= 15
+
+console.log(arr,arrInstance,arrCopy);
+
