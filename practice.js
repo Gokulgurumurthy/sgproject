@@ -134,14 +134,53 @@
 //   }
 // }
 
-function checkEvenOdd(num) {
-  for(let i=1;i<=num;i++){
- if (i % 2 == 0) {
-    console.log(i, "is even number");
-  } else {
-    console.log(i, "is odd number");
+// function checkEvenOdd(num) {
+//   for(let i=1;i<=num;i++){
+//  if (i % 2 == 0) {
+//     console.log(i, "is even number");
+//   } else {
+//     console.log(i, "is odd number");
+//   }
+// }
+// }
+
+// checkEvenOdd(16);
+
+
+// function naturalSum(val){
+//    let sum = 0;
+//   for(let i=1; i<=val; i++){
+//     // console.log(i);
+//     sum+=i;
+//    }
+//     return sum;
+    
+// }
+
+// // const ans = naturalSum(10)
+// console.log(naturalSum(10));
+
+
+// function naturalMult(val){
+//    let mul = 1;
+//   for(let i=1; i<=val; i++){
+//     // console.log(i);
+//     mul*=i;
+//    }
+//     return mul;
+    
+// }
+
+// // const ans = naturalSum(10)
+// console.log(naturalMult(5));
+
+function naturalSumArray(arr) {
+  let sum = 0;
+  for(let i=0;i<arr.length;i++){
+  // console.log(arr[i]);
+  sum+=arr[i]
   }
-}
+  return [sum];
 }
 
-checkEvenOdd(16);
+console.log(naturalSumArray([1,2,3,4,5,6,7,8,9,10]))

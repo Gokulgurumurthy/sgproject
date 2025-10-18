@@ -162,3 +162,7 @@ console.log(obj1);
 // obj4.user["D-o-B"].date=18;
 
 // console.log(obj1,obj2,obj3,obj4,"strigifydata");
+
+
+
+
