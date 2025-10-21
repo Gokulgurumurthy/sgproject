@@ -313,7 +313,9 @@ const data3 = [...data]
 // console.log(data, data2, data3)
 
 function identifyParam(obj) {
-    const objCopy = {...obj, log: "Hello I am here to tell you good morning"}
+    const objCopy = {...obj, log: "Hello I am here to tell you good morning"};
+    console.log(objCopy,"pp");
+    
     return {...obj ,log: objCopy.log};
 }
 
