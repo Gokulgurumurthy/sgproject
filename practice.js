@@ -205,104 +205,120 @@
 // Create an object with five entries, keep it nested to 2 down. (obj)use this object to spread into a new objcopy (objCopy)now modify the obj and check whether the objCopy is also changed if yes why?
 // now take this objCopy and copy the instance into an object 2 (obj2) now if you modify this,   will the spreaded objCopy change?
 
-const data = [
-  {
-    1: "gurumurthy",
-    "D-O-B": {
-      month: "feb",
-      date: 5,
-      year: 2000,
-      time: {
-        hour: "12",
-        minute: "30",
-        seconds: "45",
-      },
-    },
-  },
-  {
-    2: "gokul",
-    "D-O-B": {
-      month: "march",
-      date: 5,
-      year: 2000,
-      time: {
-        hour: "12",
-        minute: "31",
-        seconds: "45",
-      },
-    },
-  },
-  {
-    3: "shylaja",
-    "D-O-B": {
-      month: "nov",
-      date: 5,
-      year: 2000,
-      time: {
-        hour: "12",
-        minute: "32",
-        seconds: "45",
-      },
-    },
-  },
-  {
-    4: "ashwin",
-    "D-O-B": {
-      month: "sep",
-      date: 5,
-      year: 2000,
-      time: {
-        hour: "12",
-        minute: "33",
-        seconds: "45",
-      },
-    },
-  },
-  {
-    5: "gokul gurumurthy",
-    "D-O-B": {
-      month: "febmarch",
-      date: 5,
-      year: 2000,
-      time: {
-        hour: "12",
-        minute: "34",
-        seconds: "45",
-      },
-    },
-  },
-];
+// const data = [
+//   {
+//     1: "gurumurthy",
+//     "D-O-B": {
+//       month: "feb",
+//       date: 5,
+//       year: 2000,
+//       time: {
+//         hour: "12",
+//         minute: "30",
+//         seconds: "45",
+//       },
+//     },
+//   },
+//   {
+//     2: "gokul",
+//     "D-O-B": {
+//       month: "march",
+//       date: 5,
+//       year: 2000,
+//       time: {
+//         hour: "12",
+//         minute: "31",
+//         seconds: "45",
+//       },
+//     },
+//   },
+//   {
+//     3: "shylaja",
+//     "D-O-B": {
+//       month: "nov",
+//       date: 5,
+//       year: 2000,
+//       time: {
+//         hour: "12",
+//         minute: "32",
+//         seconds: "45",
+//       },
+//     },
+//   },
+//   {
+//     4: "ashwin",
+//     "D-O-B": {
+//       month: "sep",
+//       date: 5,
+//       year: 2000,
+//       time: {
+//         hour: "12",
+//         minute: "33",
+//         seconds: "45",
+//       },
+//     },
+//   },
+//   {
+//     5: "gokul gurumurthy",
+//     "D-O-B": {
+//       month: "febmarch",
+//       date: 5,
+//       year: 2000,
+//       time: {
+//         hour: "12",
+//         minute: "34",
+//         seconds: "45",
+//       },
+//     },
+//   },
+// ];
 
-// console.log(data[0]);
-
-
+// // console.log(data[0]);
 
 
 
-let objCopy = [...data]
-
-data[4]["D-O-B"].time.minute = "50"
 
 
-// console.log(data[4],objCopy[4]);// both the obj will change
+// let objCopy = [...data]
+
+// data[4]["D-O-B"].time.minute = "50"
 
 
-let obj2 = objCopy;
+// // console.log(data[4],objCopy[4]);// both the obj will change
 
-  obj2[4]["D-O-B"].time.minute = "00"
-  obj2[4][5] = "gokul"
 
-  // console.log(data[4],objCopy[4],obj2[4]);
+// let obj2 = objCopy;
+
+//   obj2[4]["D-O-B"].time.minute = "00"
+//   obj2[4][5] = "gokul"
+
+//   // console.log(data[4],objCopy[4],obj2[4]);
   
-let deepCopy = JSON.stringify(data);
-deepCopy = JSON.parse(deepCopy)
-deepCopy[4]["D-O-B"].time.minute = "16"
+// let deepCopy = JSON.stringify(data);
+// deepCopy = JSON.parse(deepCopy)
+// deepCopy[4]["D-O-B"].time.minute = "16"
   
 
-console.log(deepCopy[4],data[4]);
+// console.log(deepCopy[4],data[4]);
 
-let newData = structuredClone(data)
+// let newData = structuredClone(data)
 
-newData[4]["D-O-B"].time.minute = "001"
+// newData[4]["D-O-B"].time.minute = "001"
 
-console.log(newData[4],data[4]);
+// console.log(newData[4],data[4]);
+const data = [{h: 1}, {i: 2}, {j: 3}];
+const data2 = {...data}
+const data3 = [...data]
+
+// console.log(data, data2, data3)
+
+function identifyParam(obj) {
+    const objCopy = {...obj, log: "Hello I am here to tell you good morning"}
+    return {...obj ,log: objCopy.log};
+}
+
+let obj = identifyParam({greet: "Good morning"})
+
+console.log(identifyParam(obj))
+
+console.log(obj);
