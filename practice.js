@@ -312,15 +312,58 @@ const data3 = [...data]
 
 // console.log(data, data2, data3)
 
-function identifyParam(obj) {
-    const objCopy = {...obj, log: "Hello I am here to tell you good morning"};
-    console.log(objCopy,"pp");
+// function identifyParam(obj) {
+//     const objCopy = {...obj, log: "Hello I am here to tell you good morning"};
+//     console.log(objCopy,"pp");
     
-    return {...obj ,log: objCopy.log};
+//     return {...obj ,log: objCopy.log};
+//     console.log(obj,objCopy);
+    
+// }
+
+// let obj = identifyParam({greet: "Good morning"})
+
+// console.log(identifyParam(obj))
+
+// console.log(obj);
+
+function wish (){
+    return "good morning"
 }
 
-let obj = identifyParam({greet: "Good morning"})
+let arr = [2,"gokul",true,null,undefined,{name:"gokul"},[1,2,3],wish]
 
-console.log(identifyParam(obj))
+// console.log(arr[7]);
 
-console.log(obj);
+if ("jhgf") console.log("truthy, yyyy"); // runs
+if (42) console.log("truthy");      // runs
+if ([]) console.log("truthy");      // runs
+if ({}) console.log("truthy");      // runs
+if (new Date()) console.log("truthy"); // runs
+if (Infinity) console.log("truthy");   // runs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
