@@ -312,43 +312,86 @@ const data3 = [...data]
 
 // console.log(data, data2, data3)
 
-// function identifyParam(obj) {
-//     const objCopy = {...obj, log: "Hello I am here to tell you good morning"};
-//     console.log(objCopy,"pp");
-    
-//     return {...obj ,log: objCopy.log};
-//     console.log(obj,objCopy);
-    
-// }
 
-// let obj = identifyParam({greet: "Good morning"})
-
-// console.log(identifyParam(obj))
 
 // console.log(obj);
 
-function wish (){
-    return "good morning"
+// function wish (){
+//     return "good morning"
+// }
+
+// let arr = [2,"gokul",true,null,undefined,{name:"gokul"},[1,2,3],wish]
+
+// // console.log(arr[7]);
+
+// if ("jhgf") console.log("truthy, yyyy"); // runs
+// if (42) console.log("truthy");      // runs
+// if ([]) console.log("truthy");      // runs
+// if ({}) console.log("truthy");      // runs
+// if (new Date()) console.log("truthy"); // runs
+// if (Infinity) console.log("truthy");   // runs
+
+// function greetMessage(message){
+//     return `good ${message}!`//string literals
+//     // return "good morning!"
+// }
+// console.log(greetMessage("night"));
+
+// const obj = {
+//     Name : "gokul",
+//     surname : "Reddy",
+//     age:25,
+//     DOB:"05-03-20",
+//     city:"banglore"
+// }
+
+// function readCopy(obj){
+
+//     const{Name,age,DOB}= obj;
+//     return {...obj ,city:"bengaluru", Nation: 'Ind'};
+// }
+
+
+
+
+// console.log(readCopy(obj));
+// console.log(obj);
+
+function identifyParam(obj) {
+    const objCopy = {...obj, log: "Hello I am jjjjjjjhere to tell you good morning"};
+    // console.log(objCopy,"pp");
+    
+    return {...obj ,log: objCopy.log};
+    // console.log(obj,objCopy);
+    
 }
 
-let arr = [2,"gokul",true,null,undefined,{name:"gokul"},[1,2,3],wish]
 
-// console.log(arr[7]);
+let res = identifyParam({greet: "Good morning"})
+// {
+//   greet: 'Good morning',
+//   log: 'Hello I am jjjjjjjhere to tell you good morning'
+// }
+// console.log(res)
+// console.log(identifyParam(res))
 
-if ("jhgf") console.log("truthy, yyyy"); // runs
-if (42) console.log("truthy");      // runs
-if ([]) console.log("truthy");      // runs
-if ({}) console.log("truthy");      // runs
-if (new Date()) console.log("truthy"); // runs
-if (Infinity) console.log("truthy");   // runs
+ const obj = {
+    Name : "gokul",
+    surname : "Reddy",
+    age:25,
+    DOB:"05-03-20",
+    city:"banglore"
+}
 
+function readCopy(obj, arr) {
+    const {Name,surname,age,DOB,city} = obj
+    const [fullName,region]= arr
+    return region;
+    
+}
 
-
-
-
-
-
-
+const {Name,surname,age,DOB,city} = obj
+console.log(readCopy(obj, ["Goki",DOB]))
 
 
 
