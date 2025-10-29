@@ -306,9 +306,9 @@
 // newData[4]["D-O-B"].time.minute = "001"
 
 // console.log(newData[4],data[4]);
-const data = [{h: 1}, {i: 2}, {j: 3}];
-const data2 = {...data}
-const data3 = [...data]
+// const data = [{h: 1}, {i: 2}, {j: 3}];
+// const data2 = {...data}
+// const data3 = [...data]
 
 // console.log(data, data2, data3)
 
@@ -357,41 +357,63 @@ const data3 = [...data]
 // console.log(readCopy(obj));
 // console.log(obj);
 
-function identifyParam(obj) {
-    const objCopy = {...obj, log: "Hello I am jjjjjjjhere to tell you good morning"};
-    // console.log(objCopy,"pp");
+// function identifyParam(obj) {
+//     const objCopy = {...obj, log: "Hello I am jjjjjjjhere to tell you good morning"};
+//     // console.log(objCopy,"pp");
     
-    return {...obj ,log: objCopy.log};
-    // console.log(obj,objCopy);
+//     return {...obj ,log: objCopy.log};
+//     // console.log(obj,objCopy);
     
-}
-
-
-let res = identifyParam({greet: "Good morning"})
-// {
-//   greet: 'Good morning',
-//   log: 'Hello I am jjjjjjjhere to tell you good morning'
 // }
-// console.log(res)
-// console.log(identifyParam(res))
 
- const obj = {
+
+// let res = identifyParam({greet: "Good morning"})
+// // {
+// //   greet: 'Good morning',
+// //   log: 'Hello I am jjjjjjjhere to tell you good morning'
+// // }
+// // console.log(res)
+// // console.log(identifyParam(res))
+
+//  const obj = {
+//     Name : "gokul",
+//     surname : "Reddy",
+//     age:25,
+//     DOB:"05-03-20",
+//     city:"banglore"
+// }
+
+// function readCopy(obj, arr) {
+//     const {Name,surname,age,DOB,city} = obj
+//     const [fullName,region]= arr
+//     return region;
+    
+// }
+
+// const {Name,surname,age,DOB,city} = obj
+// console.log(readCopy(obj, ["Goki",DOB]))
+
+
+
+const obj = {
     Name : "gokul",
     surname : "Reddy",
     age:25,
     DOB:"05-03-20",
     city:"banglore"
-}
+};
 
-function readCopy(obj, arr) {
+
+
+const arr = [1,2,"hello", obj];
+
+function readCopy(){
     const {Name,surname,age,DOB,city} = obj
-    const [fullName,region]= arr
-    return region;
+    return city;
     
 }
 
-const {Name,surname,age,DOB,city} = obj
-console.log(readCopy(obj, ["Goki",DOB]))
+console.log(readCopy("bengaluru"));
 
 
 
