@@ -435,6 +435,9 @@ function randomNumbers(){
 const [c11,c12,c13,c14,c15,c17] = randomNumbers()
 console.log(c17);
 
+let arr1 = [1,2,3,4];
+let [g1,g2, ,g4]= arr1;
+console.log(g1,g2,g4);
 
 
 
