@@ -430,6 +430,7 @@ let obj = {
 };
 
 let {name,age} = obj
+let {name:fullName,age:year}= obj
 
-console.log(obj);
+console.log(fullName,year);
 
