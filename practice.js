@@ -293,11 +293,11 @@
 //   obj2[4][5] = "gokul"
 
 //   // console.log(data[4],objCopy[4],obj2[4]);
-  
+
 // let deepCopy = JSON.stringify(data);
 // deepCopy = JSON.parse(deepCopy)
 // deepCopy[4]["D-O-B"].time.minute = "16"
-  
+
 
 // console.log(deepCopy[4],data[4]);
 
@@ -360,10 +360,10 @@
 // function identifyParam(obj) {
 //     const objCopy = {...obj, log: "Hello I am jjjjjjjhere to tell you good morning"};
 //     // console.log(objCopy,"pp");
-    
+
 //     return {...obj ,log: objCopy.log};
 //     // console.log(obj,objCopy);
-    
+
 // }
 
 
@@ -387,7 +387,7 @@
 //     const {Name,surname,age,DOB,city} = obj
 //     const [fullName,region]= arr
 //     return region;
-    
+
 // }
 
 // const {Name,surname,age,DOB,city} = obj
@@ -396,24 +396,27 @@
 
 
 const obj = {
-    Name : "gokul",
-    surname : "Reddy",
-    age:25,
-    DOB:"05-03-20",
-    city:"banglore"
+    Name: "gokul",
+    surname: "Reddy",
+    age: 25,
+    DOB: "05-03-20",
+    city: "banglore"
 };
 
 
 
-const arr = [1,2,"hello", obj];
+const arr = [1, 2, "hello", obj];
 
-function readCopy(){
-    const {Name,surname,age,DOB,city} = obj
+function readCopy() {
+    const { Name, surname, age, DOB, city } = obj
     return city;
-    
+
 }
 
-console.log(readCopy("bengaluru"));
+console.log(readCopy());
+
+
+
 
 
 
