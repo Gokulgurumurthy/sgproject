@@ -450,3 +450,4 @@ let obj1 = {
 
 let {fullName,age,info:{username,email}} = obj1
 console.log(email);
+
