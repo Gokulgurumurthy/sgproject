@@ -434,3 +434,10 @@ let {name:fullName,age:year}= obj
 
 console.log(fullName,year);
 
+let car = {
+    brand:"tesla",
+}
+
+let{brand,model="model s"} = car
+
+console.log(brand,model);
