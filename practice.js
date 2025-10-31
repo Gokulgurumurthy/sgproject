@@ -419,6 +419,97 @@ console.log(readCopy());
 
 
 
+function randomFunction(val1,val2, val3){
+    return [val1, val2, val3];
+}
+
+
+const [c1, c2, c3] = randomFunction(1,2,3)
+console.log(c1, c2, c3)
+
+
+function randomNumbers(){
+    return [1,2,3,4,5,7];
+}
+
+const [c11,c12,c13,c14,c15,c17] = randomNumbers()
+console.log(c17);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
