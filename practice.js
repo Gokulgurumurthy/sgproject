@@ -275,17 +275,11 @@
 
 // // console.log(data[0]);
 
-
-
-
-
 // let objCopy = [...data]
 
 // data[4]["D-O-B"].time.minute = "50"
 
-
 // // console.log(data[4],objCopy[4]);// both the obj will change
-
 
 // let obj2 = objCopy;
 
@@ -297,7 +291,6 @@
 // let deepCopy = JSON.stringify(data);
 // deepCopy = JSON.parse(deepCopy)
 // deepCopy[4]["D-O-B"].time.minute = "16"
-
 
 // console.log(deepCopy[4],data[4]);
 
@@ -311,8 +304,6 @@
 // const data3 = [...data]
 
 // console.log(data, data2, data3)
-
-
 
 // console.log(obj);
 
@@ -351,9 +342,6 @@
 //     return {...obj ,city:"bengaluru", Nation: 'Ind'};
 // }
 
-
-
-
 // console.log(readCopy(obj));
 // console.log(obj);
 
@@ -365,7 +353,6 @@
 //     // console.log(obj,objCopy);
 
 // }
-
 
 // let res = identifyParam({greet: "Good morning"})
 // // {
@@ -393,139 +380,56 @@
 // const {Name,surname,age,DOB,city} = obj
 // console.log(readCopy(obj, ["Goki",DOB]))
 
+// const obj = {
+//     Name: "gokul",
+//     surname: "Reddy",
+//     age: 25,
+//     DOB: "05-03-20",
+//     city: "banglore"
+// };
 
+// const arr = [1, 2, "hello", obj];
 
-const obj = {
-    Name: "gokul",
-    surname: "Reddy",
-    age: 25,
-    DOB: "05-03-20",
-    city: "banglore"
+// function readCopy() {
+//     const { Name, surname, age, DOB, city } = obj
+//     return city;
+
+// }
+
+// console.log(readCopy());
+
+// function randomFunction(val1,val2, val3){
+//     return [val1, val2, val3];
+// }
+
+// const [c1, c2, c3] = randomFunction(1,2,3)
+// console.log(c1, c2, c3)
+
+// function randomNumbers(){
+//     return [1,2,3,4,5,7];
+// }
+
+// const [c11,c12,c13,c14,c15,c17] = randomNumbers()
+// console.log(c17);
+
+// let arr1 = [1,2,3,4];
+// let [g1,g2, ,g4]= arr1;
+// console.log(g1,g2,g4);
+
+// Destructure an object { name: "Alice", age: 25 } to extract both properties.
+
+// Rename the extracted properties while destructuring { id: 1, grade: "A" }.
+
+// Use default values while destructuring { brand: "Tesla" } where model defaults to "Model S".
+
+// Destructure nested objects to extract username and email from { info: { username: "harry", email: "harry@example.com" } }.
+
+let obj = {
+  name: "Alice",
+  age: 25,
 };
 
+let {name,age} = obj
 
-
-const arr = [1, 2, "hello", obj];
-
-function readCopy() {
-    const { Name, surname, age, DOB, city } = obj
-    return city;
-
-}
-
-console.log(readCopy());
-
-
-
-
-
-function randomFunction(val1,val2, val3){
-    return [val1, val2, val3];
-}
-
-
-const [c1, c2, c3] = randomFunction(1,2,3)
-console.log(c1, c2, c3)
-
-
-function randomNumbers(){
-    return [1,2,3,4,5,7];
-}
-
-const [c11,c12,c13,c14,c15,c17] = randomNumbers()
-console.log(c17);
-
-let arr1 = [1,2,3,4];
-let [g1,g2, ,g4]= arr1;
-console.log(g1,g2,g4);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(obj);
 
