@@ -424,20 +424,29 @@
 
 // Destructure nested objects to extract username and email from { info: { username: "harry", email: "harry@example.com" } }.
 
-let obj = {
-  name: "Alice",
-  age: 25,
-};
+// let obj = {
+//   name: "Alice",
+//   age: 25,
+// };
 
-let {name,age} = obj
-let {name:fullName,age:year}= obj
+// let { name, age } = obj;
+// let { name: fullName, age: year } = obj;
 
-console.log(fullName,year);
+// console.log(fullName, year);
 
 let car = {
-    brand:"tesla",
-}
+  brand: "tesla",
+};
 
-let{brand,model="model s"} = car
+let { brand, model = "model s" } = car;
 
-console.log(brand,model);
+console.log(brand, model);
+
+let obj1 = {
+  fullName: "gokul g",
+  age: 25,
+  info: { username: "gokul", email: "gokulg4449@gmail.com" },
+};
+
+let {fullName,age,info:{username,email}} = obj1
+console.log(email);
