@@ -434,20 +434,60 @@
 
 // console.log(fullName, year);
 
-let car = {
-  brand: "tesla",
-};
+// let car = {
+//   brand: "tesla",
+// };
 
-let { brand, model = "model s" } = car;
+// let { brand, model = "model s" } = car;
 
-console.log(brand, model);
+// console.log(brand, model);
 
-let obj1 = {
-  fullName: "gokul g",
-  age: 25,
-  info: { username: "gokul", email: "gokulg4449@gmail.com" },
-};
+// let obj1 = {
+//   fullName: "gokul g",
+//   age: 25,
+//   info: { username: "gokul", email: "gokulg4449@gmail.com" },
+// };
 
-let {fullName,age,info:{username,email}} = obj1
-console.log(email);
+// let {fullName,age,info:{username,email}} = obj1
+// console.log(email);
 
+// Create a function destructure, for which three arguements will be passed such as the value of firstName, lastName and age.
+// Now inside the function return an array of object, the object contains this three keys.
+// Now call the function and destructure the array, and also destructure the value of the destructured-array which will result in an object =>  this desctuctured data of the object should be consoled onto the terminal
+
+// function destructure(firstName,secondName,age) {  
+//   // const fName = firstname, sName = secondname;
+//   return [{fName:firstName,sName:secondName,age}];
+// }
+// const [result] = destructure("gokul","gurumurthy",25);
+// // console.log(result);
+// const {fName,sName,age} = result
+
+// console.log(fName,sName,age);
+
+// const destructure = ({firstName,secondName,age}) => {
+//     // console.log(o);
+//     // const {firstName,secondName,age} = obj
+//     return [firstName,secondName,age]
+// }
+// const [answer,ans,an] = destructure({firstName:"gokul",secondName:"guru",age:25})
+// console.log(answer,ans,an);
+
+
+// const destructure = ({firstName}) => {
+//     // console.log(o);
+//     // const {firstName,secondName,age} = obj
+//     return [firstName]
+// }
+// const [answer] = destructure({firstName:"gokul"})
+// console.log(answer);
+
+// const destructure = ({firstName}) => firstName + " gurumurthy"
+
+// console.log(destructure({firstName:"gokul"}));
+
+// IIFE => immediate invocation function execution
+
+(function fullName(name){
+  console.log(name)
+}) ("gokulg")
