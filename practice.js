@@ -488,6 +488,23 @@
 
 // IIFE => immediate invocation function execution
 
-(function fullName(name){
-  console.log(name)
-}) ("gokulg")
+// (function fullName(name){
+//   console.log(name)
+// }) ("gokulg")
+
+console.log([] + []);
+console.log([] + {});
+console.log({} + []);
+console.log({} + {});
+console.log(false + true);
+console.log(false + false);
+console.log(true + true);
+console.log(true + true);
+console.log("5" - 3);
+console.log("5" + 3);
+console.log([] + []);
+console.log(![] == []);
+
+
+
+
