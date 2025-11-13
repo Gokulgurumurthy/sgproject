@@ -492,19 +492,30 @@
 //   console.log(name)
 // }) ("gokulg")
 
-console.log([] + []);
-console.log([] + {});
-console.log({} + []);
-console.log({} + {});
-console.log(false + true);
-console.log(false + false);
-console.log(true + true);
-console.log(true + true);
-console.log("5" - 3);
-console.log("5" + 3);
-console.log([] + []);
-console.log(![] == []);
+// console.log([] + []);
+// console.log([] + {});
+// console.log({} + []);
+// console.log({} + {});
+// console.log(false + true);
+// console.log(false + false);
+// console.log(true + true);
+// console.log(true + true);
+// console.log("5" - 3);
+// console.log("5" + 3);
+// console.log([] + []);
+// console.log(![] == []);
 
+
+
+// console.log((function countSum(n){
+//     let sum = 0;
+//     for(let i=0;i<=n;i++){
+//         sum+= i
+//     }
+//     return sum ;
+// })(10))
+
+// callbacks
 
 
 
