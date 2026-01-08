@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "nodemon index.js",
     "dev2": "nodemon practice.js",
-    "dev3": "nodemon review.js"
+    "dev3": "nodemon review.js",
+    "dev4": "nodemon recall.js"
 
   },
   "keywords": [],
