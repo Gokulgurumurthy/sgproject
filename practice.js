@@ -200,7 +200,7 @@
 
 // arrCopy[6][1]= 15
 
-// console.log(arr,arrInstance,arrCopy);
+// console.log(arr,arrInstance,arrCopy);arr = 1,2,3,4,"hello",true,[1,15,3] arrInstance = 1,2,3,4,"good day",true,[1,2,3] arrCopy = 1,2,3,4,"hello",true,[1,15,3]
 
 // Create an object with five entries, keep it nested to 2 down. (obj)use this object to spread into a new objcopy (objCopy)now modify the obj and check whether the objCopy is also changed if yes why?
 // now take this objCopy and copy the instance into an object 2 (obj2) now if you modify this,   will the spreaded objCopy change?
