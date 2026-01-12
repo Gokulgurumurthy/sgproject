@@ -200,7 +200,7 @@
 
 // arrCopy[6][1]= 15
 
-// console.log(arr,arrInstance,arrCopy);arr = 1,2,3,4,"hello",true,[1,15,3] arrInstance = 1,2,3,4,"good day",true,[1,2,3] arrCopy = 1,2,3,4,"hello",true,[1,15,3]
+// console.log(arr,arrInstance,arrCopy);arr = 1,2,3,4,"good day",true,[1,15,3] arrInstance = 1,2,3,4,"good day",true,[1,15,3] arrCopy = 1,2,3,4,"good day",true,[1,15,3]
 
 // Create an object with five entries, keep it nested to 2 down. (obj)use this object to spread into a new objcopy (objCopy)now modify the obj and check whether the objCopy is also changed if yes why?
 // now take this objCopy and copy the instance into an object 2 (obj2) now if you modify this,   will the spreaded objCopy change?
@@ -519,3 +519,99 @@
 
 
 
+
+
+// let a = "hello"; // 123456789ABCDEF      => #10AB34 
+// let b = a; => #787fd1
+// b = "world";
+
+// console.log(a, b);
+
+const schoolData_0 = {
+    userName: "John doe",
+    email: "john@gmail.com",
+    schoolClass: {
+        section: "A",
+        standard: 1,
+        rollNo: {
+            classRollNo: 190,
+            universityRollNo: "SJR789",
+        }
+    },
+    school: "SJR",
+    location: "Bangalore, India"
+}
+
+const schoolData_1 = schoolData_0;
+
+schoolData_1.userName = "Jacob Doe";
+
+const schoolData_2 = {...schoolData_0}
+
+schoolData_2.userName = "Alisa Doe";
+
+// console.log(schoolData_1.userName, schoolData_0.userName, schoolData_2.userName)
+
+
+schoolData_1.schoolClass.rollNo.classRollNo = 200;
+schoolData_2.schoolClass.standard = 10;
+// schoolData_2.schoolClass.rollNo.classRollNo = 300;
+
+const schoolData_3 = structuredClone(schoolData_0); 
+
+
+schoolData_3.schoolClass.standard = 8;
+
+// or
+
+const parsedData_4 = JSON.parse(JSON.stringify(schoolData_0)); 
+
+parsedData_4.schoolClass.standard = 12
+
+
+
+
+// polyfill
+
+const myStructuredClone = (obj) => JSON.parse(JSON.stringify(obj));
+
+
+const schoolData_5 = myStructuredClone(schoolData_0);
+
+schoolData_5.schoolClass.standard = 15
+
+
+
+
+// console.log("Roll no changes", schoolData_0.class, schoolData_1.class, schoolData_2.class, schoolData_3.class, parsedData_4.class, schoolData_5.class)
+
+
+
+
+
+
+
+
+
+
+const {classRollNo, universityRollNo} = schoolData_5.schoolClass.rollNo
+// const {section, standard, rollNo} = schoolClass;
+// const {classRollNo, universityRollNo} = rollNo;
+ 
+
+// console.log(userName, email, schoolClass);
+
+// console.log("school_class_obj", section, standard, rollNo);
+
+// console.log("class_roll_obj",classRollNo, universityRollNo);
+
+// console.log(classRollNo, universityRollNo)
+
+
+
+
+const arr = [1,2,3,schoolData_0];
+
+const [val1,val2,val3,obj]= arr
+
+console.log(val1,val2,val3,obj);
