@@ -455,7 +455,7 @@
 // Now inside the function return an array of object, the object contains this three keys.
 // Now call the function and destructure the array, and also destructure the value of the destructured-array which will result in an object =>  this desctuctured data of the object should be consoled onto the terminal
 
-// function destructure(firstName,secondName,age) {  
+// function destructure(firstName,secondName,age) {
 //   // const fName = firstname, sName = secondname;
 //   return [{fName:firstName,sName:secondName,age}];
 // }
@@ -472,7 +472,6 @@
 // }
 // const [answer,ans,an] = destructure({firstName:"gokul",secondName:"guru",age:25})
 // console.log(answer,ans,an);
-
 
 // const destructure = ({firstName}) => {
 //     // console.log(o);
@@ -505,8 +504,6 @@
 // console.log([] + []);
 // console.log(![] == []);
 
-
-
 // console.log((function countSum(n){
 //     let sum = 0;
 //     for(let i=0;i<=n;i++){
@@ -517,5 +514,36 @@
 
 // callbacks
 
+function addFun(a, b) {
+  return a + b;
+}
+function subFun(a, b) {
+  return a - b;
+}
+function divFun(a, b) {
+  return a / b;
+}
+function multFun(a, b) {
+  return a * b;
+}
 
+// function calculateFun(a, b, operation) {
+//   if (operation === "add") {
+//     return addFun(a, b);
+//   } else if (operation === "sub") {
+//     if (a > b) return subFun(a, b);
+//     return subFun(b, a);
+//   } else if (operation === "div") {
+//     if (a > b) return divFun(a, b);
+//     return divFun(b, a);
+//   } else if (operation === "mult") {
+//     return multFun(a, b);
+//   } else return `${operation} is not a valid term`;
+// }
+// console.log(calculateFun(10, "50", "div"));
 
+function calculateFun(a, b, operationFn) {
+  let posA = -a - a + a;
+  console.log(posA);
+}
+console.log(calculateFun(-10, 6, multFun));
