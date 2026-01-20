@@ -542,8 +542,80 @@ function multFun(a, b) {
 // }
 // console.log(calculateFun(10, "50", "div"));
 
-function calculateFun(a, b, operationFn) {
-  let posA = -a - a + a;
-  console.log(posA);
+// function calculateFun(a, b, operationFn) {
+//   let posA = -a - a + a;
+//   console.log(posA);
+// }
+// console.log(calculateFun(-10, 6, multFun));
+
+// function greet(name, callback) {
+//   console.log("Hello " + name);
+//   callback();
+// }
+
+// function sayBye() {
+//   console.log("Goodbye!");
+// }
+
+// greet("Alex", sayBye);
+
+
+// function fetchData(callback) {
+//   const data = "Some data";
+//   callback(data);
+// }
+
+// fetchData((result) =>{
+//   console.log(result);
+// });
+
+// function printData(result) {
+//   console.log(result);
+// }
+
+// fetchData(printData)
+
+// const global = "gokul" //global scope
+
+// function tellMyName (){
+//     let lastname = "reddy";
+
+//     function tellMyAge (){
+//         let age = 25;
+        
+//         return `my name is ${global} ${lastname} and my age is ${age}`  
+//     }
+//     return tellMyAge();
+// }
+
+// console.log(tellMyName());
+
+
+// Closures
+
+let globalVar = 10;
+
+function grandParentFn(){
+    let grandParentVar = 9;
+
+    function parentFn(){
+        let parentVar = 8 
+        
+        function childFn(){
+            let childVar = 7;
+
+            console.log(childVar);
+            console.log(parentVar);
+            console.log(grandParentVar);
+            console.log(globalVar);
+            return "end";       
+        }
+        return childFn;
+    }
+    return parentFn;
 }
-console.log(calculateFun(-10, 6, multFun));
+    const parentResponse = grandParentFn();
+    const childResponse = parentResponse();
+    
+    console.log(childResponse());
+    
